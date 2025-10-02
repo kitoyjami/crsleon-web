@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "tanques-y-piping",
+    "title": "Tanques & Piping",
+    "summary": "API 650, manifolds, spools, pruebas y recubrimientos.",
+    "bullets": [
+      "API 650/ASTM",
+      "Pruebas & NDT",
+      "Recubrimientos industriales"
+    ],
+    "heroImage": "/images/services/tanques.jpg"
+  },
+  {
+    "slug": "estructuras-metalicas",
+    "title": "Estructuras Metálicas",
+    "summary": "Diseño, fabricación y montaje con QA/QC.",
+    "bullets": [
+      "Cálculo y taller propio",
+      "Montaje en sitio",
+      "Dosier de calidad"
+    ],
+    "heroImage": "/images/services/estructuras.jpg"
+  },
+  {
+    "slug": "mantenimiento-industrial",
+    "title": "Mantenimiento Industrial",
+    "summary": "Paradas de planta, inspección y remedición de corrosión.",
+    "bullets": [
+      "Paradas planificadas",
+      "Inspección API",
+      "Dosier fotográfico"
+    ],
+    "heroImage": "/images/services/mantenimiento.jpg"
+  }
+]
