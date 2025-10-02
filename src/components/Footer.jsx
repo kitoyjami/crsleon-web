@@ -1,7 +1,8 @@
 import site from '@/data/site.json'
 
 const codigoEticaUrl = import.meta.env.VITE_CODIGO_ETICA_URL ?? '/codigo-de-etica'
-const brochureUrl = import.meta.env.VITE_BROCHURE_URL ?? '/assets/pdf/brochure.pdf'
+const brochureUrl =
+  import.meta.env.VITE_BROCHURE_URL ?? 'https://crsleon.com/wp-content/uploads/2023/10/Portafolio_CRSLeonIngenieros-05-05-23.pdf'
 
 export function Footer() {
   return (
@@ -39,7 +40,12 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href={brochureUrl} className="transition hover:text-brand-primary">
+              <a
+                href={brochureUrl}
+                className="transition hover:text-brand-primary"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Descargar brochure
               </a>
             </li>

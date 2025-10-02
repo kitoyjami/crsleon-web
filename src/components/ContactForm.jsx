@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Button } from './ui/Button'
 
-const contactEmail = import.meta.env.VITE_CONTACT_EMAIL ?? 'comercial@crsleon.com'
-const whatsappNumber = import.meta.env.VITE_WSP ?? '+51999999999'
+const contactEmail = import.meta.env.VITE_CONTACT_EMAIL ?? 'eurbano@crsleon.com'
+const whatsappNumber = import.meta.env.VITE_WSP ?? '+51976248678'
 
 export function ContactForm() {
   const [form, setForm] = useState({
@@ -23,7 +23,7 @@ export function ContactForm() {
   const handleSubmit = (event) => {
     event.preventDefault()
     const body = encodeURIComponent(
-      `Nombre: ${form.name}\nEmpresa: ${form.company}\nTeléfono: ${form.phone}\nMensaje: ${form.message}`,
+      `Nombre: ${form.name}\nEmpresa: ${form.company}\nEmail: ${form.email}\nTeléfono: ${form.phone}\nMensaje: ${form.message}`,
     )
     window.location.href = `mailto:${contactEmail}?subject=Solicitud%20de%20cotización&body=${body}`
   }

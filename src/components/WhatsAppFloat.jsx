@@ -1,4 +1,4 @@
-const whatsappNumber = import.meta.env.VITE_WSP ?? '+51999999999'
+const whatsappNumber = import.meta.env.VITE_WSP ?? '+51976248678'
 const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^\d]/g, '')}`
 
 export function WhatsAppFloat() {

@@ -11,8 +11,11 @@ const navItems = [
   { to: '/contacto', label: 'Contacto' },
 ]
 
-const correoUrl = import.meta.env.VITE_CORREO_URL ?? '#'
+const correoUrl = import.meta.env.VITE_CORREO_URL ?? 'https://crsleon.com:2096/'
 const codigoEticaUrl = import.meta.env.VITE_CODIGO_ETICA_URL ?? '/codigo-de-etica'
+const brochureUrl = import.meta.env.VITE_BROCHURE_URL ?? 'https://crsleon.com/wp-content/uploads/2023/10/Portafolio_CRSLeonIngenieros-05-05-23.pdf'
+const contactEmail = import.meta.env.VITE_CONTACT_EMAIL ?? 'eurbano@crsleon.com'
+const logoSrc = 'https://crsleon.com/wp-content/uploads/2021/08/logo-leon-white.svg'
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -21,10 +24,15 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link to="/" className="flex items-center gap-3 text-lg font-semibold text-brand-primary">
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-white">
-            CR
+          <span className="inline-flex items-center rounded-full bg-brand-primary px-4 py-2">
+            <img
+              src={logoSrc}
+              alt="CRS León Ingenieros"
+              className="h-6 w-auto"
+              loading="lazy"
+            />
           </span>
-          <span>CRS León</span>
+          <span className="text-brand-primary">CRS León</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium text-neutral-700 md:flex">
           {navItems.map((item) => (
@@ -42,12 +50,14 @@ export function Header() {
             Código de Ética
           </a>
           <a
-            href="/brochure"
+            href={brochureUrl}
             className="transition hover:text-brand-primary"
+            target="_blank"
+            rel="noreferrer"
           >
             PDF Brochure
           </a>
-          <Button as="a" href="/contacto" className="!rounded-full">
+          <Button as="a" href={`mailto:${contactEmail}`} className="!rounded-full">
             Cotizar
           </Button>
           <Button
@@ -93,10 +103,16 @@ export function Header() {
             <a href={codigoEticaUrl} className="transition hover:text-brand-primary" onClick={() => setOpen(false)}>
               Código de Ética
             </a>
-            <a href="/brochure" className="transition hover:text-brand-primary" onClick={() => setOpen(false)}>
+            <a
+              href={brochureUrl}
+              className="transition hover:text-brand-primary"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
+            >
               PDF Brochure
             </a>
-            <Button as="a" href="/contacto" onClick={() => setOpen(false)}>
+            <Button as="a" href={`mailto:${contactEmail}`} onClick={() => setOpen(false)}>
               Cotizar
             </Button>
             <Button as="a" href={correoUrl} variant="outline" target="_blank" rel="noreferrer">

@@ -1,4 +1,5 @@
 import { Section } from '@/components/Section'
+import { EthicsLineCard } from '@/components/EthicsLineCard'
 
 const codigoEticaUrl = import.meta.env.VITE_CODIGO_ETICA_URL ?? '/assets/pdf/codigo-etica.pdf'
 
@@ -25,6 +26,9 @@ export default function CodigoEtica() {
         >
           Ver código completo
         </a>
+      </div>
+      <div className="mt-12">
+        <EthicsLineCard />
       </div>
     </Section>
   )

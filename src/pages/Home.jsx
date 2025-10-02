@@ -9,6 +9,9 @@ import { ProjectCard } from '@/components/ProjectCard'
 import { KPICounter } from '@/components/KPICounter'
 import { Button } from '@/components/ui/Button'
 
+const brochureUrl =
+  import.meta.env.VITE_BROCHURE_URL ?? 'https://crsleon.com/wp-content/uploads/2023/10/Portafolio_CRSLeonIngenieros-05-05-23.pdf'
+
 export default function Home() {
   return (
     <div className="space-y-0">
@@ -80,7 +83,14 @@ export default function Home() {
           <Button as="a" href="/contacto">
             Solicitar propuesta
           </Button>
-          <Button as="a" href="/brochure" variant="outline" className="text-white">
+          <Button
+            as="a"
+            href={brochureUrl}
+            variant="outline"
+            className="text-white"
+            target="_blank"
+            rel="noreferrer"
+          >
             Descargar brochure
           </Button>
         </div>
