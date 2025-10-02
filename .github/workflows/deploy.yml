@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 permissions:
-  contents: write
+  contents: write   # permite al bot escribir en el repo
 
 jobs:
   build:
@@ -24,14 +24,10 @@ jobs:
           npm ci
           npm run build
 
-      - name: Push dist to deploy branch
-        run: |
-          cd dist
-          git init
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Build ${GITHUB_SHA}"
-          git branch -M deploy
-          git remote add origin "${{ github.server_url }}/${{ github.repository }}.git"
-          git push -f origin deploy
+      - name: Publish dist to deploy branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: deploy
+          force_orphan: true
