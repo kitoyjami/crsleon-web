@@ -1,0 +1,48 @@
+[
+  {
+    "slug": "tanque-atmosferico-66x8",
+    "title": "Tanque atmosférico 6.6 m x 8 m",
+    "client": "Shahuindo",
+    "sector": "Minería",
+    "type": "Tanques",
+    "kpis": {
+      "plazo_dias": 28,
+      "anillos": 6,
+      "norma": "API 650"
+    },
+    "thumb": "/images/proyectos/tanque66x8-thumb.jpg",
+    "gallery": [
+      "/images/proyectos/tanque66x8-1.jpg",
+      "/images/proyectos/tanque66x8-2.jpg"
+    ],
+    "summary": "Fabricación en taller y montaje en mina con QA/QC y pruebas.",
+    "deliverables": [
+      "Plan de fabricación",
+      "Informe de ensayos NDT",
+      "Dossier fotográfico"
+    ]
+  },
+  {
+    "slug": "estructura-shiploader",
+    "title": "Estructura metálica Shiploader",
+    "client": "Terminal Portuario",
+    "sector": "Infraestructura",
+    "type": "Estructuras",
+    "kpis": {
+      "plazo_dias": 45,
+      "toneladas": 120,
+      "norma": "AWS D1.1"
+    },
+    "thumb": "/images/proyectos/shiploader-thumb.jpg",
+    "gallery": [
+      "/images/proyectos/shiploader-1.jpg",
+      "/images/proyectos/shiploader-2.jpg"
+    ],
+    "summary": "Fabricación y montaje controlado bajo plan QA/QC completo.",
+    "deliverables": [
+      "Dossier de soldadura",
+      "Certificados de materiales",
+      "Plan de izaje"
+    ]
+  }
+]
